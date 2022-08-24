@@ -1,7 +1,20 @@
+import EventList from '../../components/events/EventList';
+import EventSearch from '../../components/events/EventSearch';
+import { getAllEvents } from '../../utilities/handle-dummy-data';
+import { useRouter } from 'next/router';
+
 const AllEventsPage = () => {
+  const router = useRouter();
+  const allEvents = getAllEvents();
+  const filterEvents = (year: string, month: string) => {
+    const fullPath = `/events/${year}/${month}`;
+    router.push(fullPath);
+  };
+
   return (
     <div>
-      <h1 className="main-title">Все квизы</h1>
+      <EventSearch onSearch={filterEvents} />
+      <EventList items={allEvents} />
     </div>
   );
 };

@@ -15,7 +15,7 @@ const EventDetailPage = () => {
   }
 
   return (
-    <Fragment>
+    <div className="event-details-container">
       <EventSummary title={event.title} />
       <EventLogistics
         date={event.date}
@@ -26,7 +26,7 @@ const EventDetailPage = () => {
       <EventContent>
         <p>{event.description}</p>
       </EventContent>
-    </Fragment>
+    </div>
   );
 };
 export default EventDetailPage;

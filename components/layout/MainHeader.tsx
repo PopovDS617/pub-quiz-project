@@ -13,11 +13,15 @@ const MainHeader = () => {
         </Link>
       </div>
       <nav className="main-header-navigation">
-        <ul>
-          <li>
-            <Link href="/events">Все квизы</Link>
-          </li>
-        </ul>
+        <div>
+          <Link href="/events">Список квизов</Link>
+        </div>
+        <div>
+          <Link href="/what-is-quiz">Что такое квиз</Link>
+        </div>
+        <div>
+          <Link href="/about">О нас</Link>
+        </div>
       </nav>
     </header>
   );

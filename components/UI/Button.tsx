@@ -3,14 +3,23 @@ import Link from 'next/link';
 
 type ButtonProps = {
   children: React.ReactNode;
-  link: string;
+  link?: string;
+  onClick?: () => void;
 };
 
 const Button = (props: ButtonProps) => {
+  if (props.link) {
+    return (
+      <Link href={props.link}>
+        <a className="btn"> {props.children}</a>
+      </Link>
+    );
+  }
+
   return (
-    <Link href={props.link}>
-      <a className="btn"> {props.children}</a>
-    </Link>
+    <button onClick={props.onClick} className="btn">
+      {props.children}
+    </button>
   );
 };
 

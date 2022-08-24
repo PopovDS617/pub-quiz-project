@@ -1,7 +1,9 @@
-import { ReactNode } from 'react';
 import AddressIcon from '../UI/Icons/address-icon';
 import DateIcon from '../UI/Icons/date-icon';
 import LogisticsItem from './LogisticsItem';
+import PaymentIcon from '../UI/Icons/payment-icon';
+import ChatIcon from '../UI/Icons/chat-icon';
+import RegIcon from '../UI/Icons/reg-icon';
 
 type EventLogisticsProps = {
   date: string;
@@ -13,7 +15,7 @@ type EventLogisticsProps = {
 const EventLogistics = (props: EventLogisticsProps) => {
   const { date, address, image, imageAlt } = props;
 
-  const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
+  const humanReadableDate = new Date(date).toLocaleDateString('ru-RU', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
@@ -31,6 +33,16 @@ const EventLogistics = (props: EventLogisticsProps) => {
         </LogisticsItem>
         <LogisticsItem icon={AddressIcon}>
           <address>{addressText}</address>
+        </LogisticsItem>
+        <LogisticsItem icon={PaymentIcon}>
+          400 рублей с игрока (оплата на месте наличными или картой)
+        </LogisticsItem>
+        <LogisticsItem icon={RegIcon}>
+          <a href="https://vk.cc/aCKqKG">ссылка для регистрации</a>
+        </LogisticsItem>
+        <LogisticsItem icon={ChatIcon}>
+          Осталиcь вопросы?
+          <a href="https://vk.me/smuzi_rostov"> Пишите нам</a>
         </LogisticsItem>
       </ul>
     </section>
