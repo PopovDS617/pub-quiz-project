@@ -5,19 +5,20 @@ type ButtonProps = {
   children: React.ReactNode;
   link?: string;
   onClick?: () => void;
+  style: string;
 };
 
 const Button = (props: ButtonProps) => {
   if (props.link) {
     return (
       <Link href={props.link}>
-        <a className="btn"> {props.children}</a>
+        <a className={props.style}> {props.children}</a>
       </Link>
     );
   }
 
   return (
-    <button onClick={props.onClick} className="btn">
+    <button onClick={props.onClick} className={props.style}>
       {props.children}
     </button>
   );

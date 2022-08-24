@@ -14,7 +14,9 @@ const HomePage = () => {
           команду от 1 до 10 человек, захвати с собой хорошее настроение и
           приходи к нам.
         </p>
-        <Button link={'/events'}>выбрать квиз</Button>
+        <Button link={'/events'} style="btn-aux">
+          выбрать квиз
+        </Button>
       </section>
     </div>
   );

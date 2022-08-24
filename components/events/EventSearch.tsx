@@ -44,7 +44,7 @@ const EventSearch = (props: EventSearchProps) => {
           </select>
         </div>
       </div>
-      <Button>найти квиз</Button>
+      <Button style="btn-main">найти квиз</Button>
     </form>
   );
 };
