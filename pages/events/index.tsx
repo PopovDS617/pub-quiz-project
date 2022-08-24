@@ -2,21 +2,32 @@ import EventList from '../../components/events/EventList';
 import EventSearch from '../../components/events/EventSearch';
 import { getAllEvents } from '../../utilities/handle-dummy-data';
 import { useRouter } from 'next/router';
+import { EventItemType } from '../../models';
 
-const AllEventsPage = () => {
+type AllEventsPageProps = {
+  items: EventItemType[];
+};
+
+const AllEventsPage = (props: AllEventsPageProps) => {
   const router = useRouter();
-  const allEvents = getAllEvents();
+
   const filterEvents = (year: string, month: string) => {
     const fullPath = `/events/${year}/${month}`;
     router.push(fullPath);
   };
-  console.table(allEvents);
+
   return (
     <div>
       <EventSearch onSearch={filterEvents} />
-      <EventList items={allEvents} />
+      <EventList items={props.items} />
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const allEvents = getAllEvents();
+
+  return { props: { items: allEvents } };
+}
 
 export default AllEventsPage;

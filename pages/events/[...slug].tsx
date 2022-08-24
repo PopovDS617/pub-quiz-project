@@ -48,8 +48,7 @@ const FilteredEventsPage = () => {
     return (
       <React.Fragment>
         <ErrorAlert>
-          {' '}
-          <p className="filter-fail">ничего не найдено</p>{' '}
+          <p className="filter-fail">ничего не найдено</p>
         </ErrorAlert>
         <div className="filter-fail">
           <Button link="/events" style="btn-aux">
