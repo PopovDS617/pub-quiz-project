@@ -10,7 +10,7 @@ const AllEventsPage = () => {
     const fullPath = `/events/${year}/${month}`;
     router.push(fullPath);
   };
-
+  console.table(allEvents);
   return (
     <div>
       <EventSearch onSearch={filterEvents} />

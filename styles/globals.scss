@@ -57,6 +57,7 @@ a {
   align-items: center;
   padding: 1rem 5%;
   height: 7rem;
+  z-index: 999;
 }
 
 .main-header-logo {
@@ -81,6 +82,7 @@ a {
 }
 
 .main-header-navigation {
+  z-index: 999;
   display: flex;
   flex-direction: row;
   div {
