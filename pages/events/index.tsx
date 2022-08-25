@@ -17,7 +17,7 @@ const AllEventsPage = (props: AllEventsPageProps) => {
   };
 
   return (
-    <div>
+    <div className="main-list-container">
       <EventSearch onSearch={filterEvents} />
       <EventList items={props.events} />
     </div>
@@ -31,6 +31,7 @@ export async function getStaticProps() {
     props: {
       events: eventList,
     },
+    revalidate: 1800,
   };
 }
 

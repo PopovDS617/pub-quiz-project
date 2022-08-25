@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { EventItemType } from '../../models';
 import { getEventById } from '../../utilities/fetch-util';
 import EventSummary from '../../components/event-detail/EventSummary';
@@ -12,39 +12,42 @@ type EventDetailProps = {
 };
 
 const EventDetailPage = (props: EventDetailProps) => {
-  const event = props.event;
+  const event: any = props.event;
 
   if (!event) {
-    return <h1>Ничего не найдено</h1>;
+    return <h1>загрузка . . .</h1>;
   }
 
   return (
     <div className="event-details-container">
-      <EventSummary title={event.title} />
-      <EventLogistics
-        date={event.date}
-        address={event.location}
-        image={event.image}
-        imageAlt={event.title}
-      />
-      <EventContent>
-        <p>{event.description}</p>
-      </EventContent>
+      <div className="event-details-item-container">
+        <EventSummary title={event.title} />
+        <EventLogistics
+          date={event.date}
+          address={event.location}
+          image={event.image}
+          imageAlt={event.title}
+        />
+        <EventContent>
+          <p>{event.description}</p>
+        </EventContent>
+      </div>
     </div>
   );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const eventId = context.params?.eventId;
+  const eventId: any = context.params?.eventId;
   const eventItem = await getEventById(eventId);
   return {
     props: {
       event: eventItem,
     },
+    revalidate: 60,
   };
 };
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const events = await fetchEvents();
   const paths = events.map((event) => {
     return { params: { eventId: event.id } };
@@ -52,8 +55,8 @@ export async function getStaticPaths() {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   };
-}
+};
 
 export default EventDetailPage;
