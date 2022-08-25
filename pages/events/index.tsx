@@ -1,11 +1,11 @@
 import EventList from '../../components/events/EventList';
 import EventSearch from '../../components/events/EventSearch';
-import { getAllEvents } from '../../utilities/handle-dummy-data';
+import { fetchEvents } from '../../utilities/fetch-util';
 import { useRouter } from 'next/router';
 import { EventItemType } from '../../models';
 
 type AllEventsPageProps = {
-  items: EventItemType[];
+  events: EventItemType[];
 };
 
 const AllEventsPage = (props: AllEventsPageProps) => {
@@ -17,17 +17,22 @@ const AllEventsPage = (props: AllEventsPageProps) => {
   };
 
   return (
-    <div>
+    <div className="main-list-container">
       <EventSearch onSearch={filterEvents} />
-      <EventList items={props.items} />
+      <EventList items={props.events} />
     </div>
   );
 };
 
 export async function getStaticProps() {
-  const allEvents = getAllEvents();
+  const eventList = await fetchEvents();
 
-  return { props: { items: allEvents } };
+  return {
+    props: {
+      events: eventList,
+    },
+    revalidate: 1800,
+  };
 }
 
 export default AllEventsPage;
