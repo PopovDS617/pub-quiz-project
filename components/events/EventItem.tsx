@@ -1,6 +1,6 @@
 import React from 'react';
 import { EventItemType } from '../../models';
-
+import Image from 'next/image';
 import Button from '../UI/Button';
 import DateIcon from '../UI/Icons/date-icon';
 import ArrowRightIcon from '../UI/Icons/arrow-right-icon';
@@ -20,7 +20,15 @@ const EventItem = (props: EventItemType) => {
 
   return (
     <li key={id} className="event-item">
-      <img src={'/' + image} alt={title} />
+      <Image
+        src={'/' + image}
+        alt={title}
+        width={900}
+        height={310}
+        objectFit="cover"
+        objectPosition="100% 31%"
+        quality="75"
+      />
 
       <div className="event-item-content">
         <div className="event-item-summary">

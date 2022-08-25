@@ -4,6 +4,7 @@ import LogisticsItem from './LogisticsItem';
 import PaymentIcon from '../UI/Icons/payment-icon';
 import ChatIcon from '../UI/Icons/chat-icon';
 import RegIcon from '../UI/Icons/reg-icon';
+import Image from 'next/image';
 
 type EventLogisticsProps = {
   date: string;
@@ -25,7 +26,15 @@ const EventLogistics = (props: EventLogisticsProps) => {
   return (
     <section className="event-details-logistics">
       <div className="event-details-logistics-image">
-        <img src={`/${image}`} alt={imageAlt} />
+        <Image
+          src={`/${image}`}
+          alt={imageAlt}
+          width={320}
+          height={320}
+          quality="90"
+          layout="intrinsic"
+          objectFit="cover"
+        />
       </div>
       <ul className="event-details-logistics-list">
         <LogisticsItem icon={DateIcon}>

@@ -5,6 +5,7 @@ import EventSearch from '../../components/events/EventSearch';
 import Button from '../../components/UI/Button';
 import ErrorAlert from '../../components/UI/ErrorAlert';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 type FilteredEventsPageProps = {
   hasError?: boolean;
@@ -14,9 +15,17 @@ type FilteredEventsPageProps = {
 const FilteredEventsPage = (props: FilteredEventsPageProps) => {
   const router = useRouter();
 
+  const pageHead = (
+    <Head>
+      <title>Смузи квиз</title>
+      <meta name="desription" content="Смузи квиз Ростов-на-Дону" />
+    </Head>
+  );
+
   if (props.hasError) {
     return (
       <React.Fragment>
+        {pageHead}
         <ErrorAlert>
           <p>выбран неверный период</p>
         </ErrorAlert>
@@ -32,6 +41,7 @@ const FilteredEventsPage = (props: FilteredEventsPageProps) => {
   if (!props.filteredEvents || props.filteredEvents.length === 0) {
     return (
       <React.Fragment>
+        {pageHead}
         <ErrorAlert>
           <p className="filter-fail">ничего не найдено</p>
         </ErrorAlert>
@@ -50,10 +60,13 @@ const FilteredEventsPage = (props: FilteredEventsPageProps) => {
   };
 
   return (
-    <div>
-      <EventSearch onSearch={filterEvents} />
-      <EventList items={props.filteredEvents} />
-    </div>
+    <React.Fragment>
+      {pageHead}
+      <div>
+        <EventSearch onSearch={filterEvents} />
+        <EventList items={props.filteredEvents} />
+      </div>
+    </React.Fragment>
   );
 };
 

@@ -104,20 +104,15 @@ a {
   justify-content: center;
   font-size: clamp(0.5rem, 0.5rem + 2vw, 2.5rem);
 
-  img {
-    margin-top: 2rem;
-    width: 10rem;
-    object-fit: cover;
-    height: 10rem;
-    @media (min-width: 40rem) {
-      width: 20rem;
-      height: 20rem;
-    }
-  }
-
   p {
     text-align: justify;
   }
+}
+
+.home-img {
+  max-width: 30rem;
+  width: 40%;
+  text-align: center;
 }
 
 .event-list {
@@ -146,24 +141,11 @@ a {
     max-width: 90rem;
   }
 
-  img {
-    object-fit: cover;
-
-    height: 100;
-    width: 100%;
-    overflow: hidden;
-    @media (min-width: 40rem) {
-      width: 80%;
-      height: 18rem;
-      object-position: 70% 30%;
-    }
-  }
-
   h2 {
     margin: 0.5rem 1rem;
     color: #f6d614;
     text-align: center;
-    font-size: clamp(1.2rem, 0.3rem + 2vw, 1.6rem);
+    font-size: clamp(1.2rem, 0.3rem + 2vw, 1.8rem);
   }
 }
 .event-item-date,
@@ -294,7 +276,7 @@ a {
 .event-details-title {
   border-radius: 5px;
   width: 100%;
-  background: rgba(3, 190, 159, 0.708);
+  background: rgb(3, 190, 159);
   h1 {
     margin: 0;
     padding: 1rem 2rem 1rem;
@@ -307,12 +289,12 @@ a {
 
 .event-details-content {
   border-radius: 5px;
-  padding: 1rem 1rem;
-  background-color: #10162f;
-  font-size: clamp(1rem, 0.5rem + 3vw, 1.5rem);
-  color: #fefefe;
+  padding: 1rem 2rem;
+  background-color: #dda15e;
+  font-size: clamp(1rem, 0.5rem + 3vw, 1.6rem);
+  color: black;
   width: 100%;
-  text-align: left;
+  text-align: justify;
 }
 
 .event-details-logistics {
