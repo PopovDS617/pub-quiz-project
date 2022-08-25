@@ -2,6 +2,7 @@ import React from 'react';
 import PhoneIcon from '../components/UI/Icons/phone-icon';
 import Regicon from '../components/UI/Icons/reg-icon';
 import Head from 'next/head';
+import NewsSubscription from '../components/input/NewsSubscription';
 
 const about = () => {
   return (
@@ -33,6 +34,7 @@ const about = () => {
             </span>
           </div>
         </section>
+        <NewsSubscription />
       </div>
     </React.Fragment>
   );

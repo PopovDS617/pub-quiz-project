@@ -10,6 +10,7 @@
 
 $success-green: #03be9f;
 $main-purple: #5f1150;
+$secondary-pink: #cc23aa;
 
 * {
   box-sizing: border-box;
@@ -113,6 +114,71 @@ a {
   max-width: 30rem;
   width: 40%;
   text-align: center;
+}
+
+.newsletter {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    text-align: center;
+    font-size: clamp(1rem, 0.5rem + 2vw, 2rem);
+  }
+
+  p {
+    font-size: clamp(0.6rem, 0.5rem + 1vw, 1rem);
+  }
+
+  button {
+    background-color: $success-green;
+    border: 1px solid $success-green;
+    border-radius: 6px;
+    color: #dafff7;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font: inherit;
+    cursor: pointer;
+    font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
+    &:disabled {
+      background-color: grey;
+      border-color: grey;
+      cursor: not-allowed;
+      &:hover,
+      :active {
+        background-color: grey;
+        border-color: gray;
+      }
+    }
+  }
+}
+
+.newsletter-control input {
+  font: inherit;
+  padding: 0.25rem;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid #ccc;
+}
+
+.newsletter button:hover,
+.newsletter button:active {
+  background-color: $secondary-pink;
+  border-color: $secondary-pink;
+}
+
+.newsletter-control {
+  display: flex;
+  width: 100%;
+}
+
+.newsletter-control input {
+  font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
 }
 
 .event-list {
@@ -231,7 +297,7 @@ a {
 
   &:hover,
   &:active {
-    background-color: #cc23aa;
+    background-color: $secondary-pink;
     border-color: #270c32;
     color: white;
   }
@@ -251,7 +317,7 @@ a {
 
   &:hover,
   &:active {
-    background-color: #cc23aa;
+    background-color: $secondary-pink;
     border-color: #270c32;
     color: white;
   }
