@@ -5,7 +5,7 @@ const MainHeader = () => {
   return (
     <header className="main-header">
       <div className="main-header-logo">
-        <Link href="/">Смузи Квиз</Link>
+        <Link href="/">Квиз Смузи</Link>
       </div>
       <nav className="main-header-navigation">
         <div>

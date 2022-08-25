@@ -10,6 +10,7 @@
 
 $success-green: #03be9f;
 $main-purple: #5f1150;
+$secondary-pink: #cc23aa;
 
 * {
   box-sizing: border-box;
@@ -104,20 +105,80 @@ a {
   justify-content: center;
   font-size: clamp(0.5rem, 0.5rem + 2vw, 2.5rem);
 
-  img {
-    margin-top: 2rem;
-    width: 10rem;
-    object-fit: cover;
-    height: 10rem;
-    @media (min-width: 40rem) {
-      width: 20rem;
-      height: 20rem;
-    }
-  }
-
   p {
     text-align: justify;
   }
+}
+
+.home-img {
+  max-width: 30rem;
+  width: 40%;
+  text-align: center;
+}
+
+.newsletter {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    text-align: center;
+    font-size: clamp(1rem, 0.5rem + 2vw, 2rem);
+  }
+
+  p {
+    font-size: clamp(0.6rem, 0.5rem + 1vw, 1rem);
+  }
+
+  button {
+    background-color: $success-green;
+    border: 1px solid $success-green;
+    border-radius: 6px;
+    color: #dafff7;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font: inherit;
+    cursor: pointer;
+    font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
+    &:disabled {
+      background-color: grey;
+      border-color: grey;
+      cursor: not-allowed;
+      &:hover,
+      :active {
+        background-color: grey;
+        border-color: gray;
+      }
+    }
+  }
+}
+
+.newsletter-control input {
+  font: inherit;
+  padding: 0.25rem;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid #ccc;
+}
+
+.newsletter button:hover,
+.newsletter button:active {
+  background-color: $secondary-pink;
+  border-color: $secondary-pink;
+}
+
+.newsletter-control {
+  display: flex;
+  width: 100%;
+}
+
+.newsletter-control input {
+  font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
 }
 
 .event-list {
@@ -146,24 +207,11 @@ a {
     max-width: 90rem;
   }
 
-  img {
-    object-fit: cover;
-
-    height: 100;
-    width: 100%;
-    overflow: hidden;
-    @media (min-width: 40rem) {
-      width: 80%;
-      height: 18rem;
-      object-position: 70% 30%;
-    }
-  }
-
   h2 {
     margin: 0.5rem 1rem;
     color: #f6d614;
     text-align: center;
-    font-size: clamp(1.2rem, 0.3rem + 2vw, 1.6rem);
+    font-size: clamp(1.2rem, 0.3rem + 2vw, 1.8rem);
   }
 }
 .event-item-date,
@@ -182,7 +230,7 @@ a {
 
 .event-item-content {
   width: 100%;
-  padding: 1rem 1rem;
+  padding: 0 1rem;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -249,7 +297,7 @@ a {
 
   &:hover,
   &:active {
-    background-color: #cc23aa;
+    background-color: $secondary-pink;
     border-color: #270c32;
     color: white;
   }
@@ -269,7 +317,7 @@ a {
 
   &:hover,
   &:active {
-    background-color: #cc23aa;
+    background-color: $secondary-pink;
     border-color: #270c32;
     color: white;
   }
@@ -294,7 +342,7 @@ a {
 .event-details-title {
   border-radius: 5px;
   width: 100%;
-  background: rgba(3, 190, 159, 0.708);
+  background: rgb(3, 190, 159);
   h1 {
     margin: 0;
     padding: 1rem 2rem 1rem;
@@ -307,12 +355,12 @@ a {
 
 .event-details-content {
   border-radius: 5px;
-  padding: 1rem 1rem;
-  background-color: #10162f;
-  font-size: clamp(1rem, 0.5rem + 3vw, 1.5rem);
-  color: #fefefe;
+  padding: 1rem 2rem;
+  background-color: #dda15e;
+  font-size: clamp(1rem, 0.5rem + 3vw, 1.6rem);
+  color: black;
   width: 100%;
-  text-align: left;
+  text-align: justify;
 }
 
 .event-details-logistics {
