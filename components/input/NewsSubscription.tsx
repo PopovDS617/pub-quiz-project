@@ -1,13 +1,9 @@
-import React, {
-  ChangeEvent,
-  ChangeEventHandler,
-  FormEvent,
-  useState,
-} from 'react';
+import React, { ChangeEvent, FormEvent, useState, useContext } from 'react';
+import NotificationContext from '../../store/notification-context';
 
-type Props = {};
+const NewsSubscription = () => {
+  const ctx = useContext(NotificationContext);
 
-const NewsSubscription = (props: Props) => {
   const [enteredText, setEnteredText] = useState<string>('');
 
   let formIsValid = false;
@@ -30,13 +26,42 @@ const NewsSubscription = (props: Props) => {
       return;
     }
 
+    ctx.showNotification({
+      title: 'подписываемся...',
+      message: 'оформляем подписку',
+      status: 'pending',
+    });
+
     fetch('/api/newsletter-sub', {
       method: 'POST',
       body: JSON.stringify({
         email: enteredText,
       }),
       headers: { 'Content-Type': 'application/json' },
-    }).then((response) => response.json());
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+
+        return response.json().then((data) => {
+          throw new Error('что-то пошло не так');
+        });
+      })
+      .then((data) => {
+        ctx.showNotification({
+          title: 'успешно!',
+          message: 'подписка оформлена',
+          status: 'success',
+        });
+      })
+      .catch((error) => {
+        ctx.showNotification({
+          title: 'ошибка :(',
+          message: 'что-то пошло не так',
+          status: 'error',
+        });
+      });
 
     formIsValid = false;
     setEnteredText('');

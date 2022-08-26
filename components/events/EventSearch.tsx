@@ -28,7 +28,7 @@ const EventSearch = (props: EventSearchProps) => {
         </div>
         <div className="event-search-control">
           <label htmlFor="month">месяц</label>
-          <select defaultValue={'08'} id="month" ref={monthInputRef}>
+          <select id="month" ref={monthInputRef}>
             <option value="01">Январь</option>
             <option value="02">Февраль</option>
             <option value="03">Март</option>
