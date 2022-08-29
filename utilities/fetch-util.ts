@@ -1,6 +1,6 @@
 export const fetchEvents = async () => {
   const response = await fetch(
-    'https://smoothie-project-e7bb3-default-rtdb.europe-west1.firebasedatabase.app/events.json'
+    `https://${process.env.firebaseRoute}/events.json`
   );
 
   const data = await response.json();

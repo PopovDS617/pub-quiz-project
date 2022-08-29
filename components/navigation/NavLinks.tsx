@@ -9,7 +9,6 @@ type Props = {
 const NavLinks = (props: Props) => {
   const router = useRouter();
   const path = router.pathname;
-  console.log(router);
 
   return (
     <ul>
