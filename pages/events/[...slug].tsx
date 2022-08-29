@@ -6,10 +6,12 @@ import Button from '../../components/UI/Button';
 import ErrorAlert from '../../components/UI/ErrorAlert';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { EventItemType } from '../../models';
+import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 
 type FilteredEventsPageProps = {
   hasError?: boolean;
-  filteredEvents?: string[];
+  filteredEvents?: EventItemType[];
 };
 
 const FilteredEventsPage = (props: FilteredEventsPageProps) => {
@@ -70,10 +72,12 @@ const FilteredEventsPage = (props: FilteredEventsPageProps) => {
   );
 };
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
   const { params } = context;
 
-  const filterData = params.slug;
+  const filterData = params?.slug;
 
   if (!filterData) {
     return <p className="loading">загружаемся...</p>;

@@ -1,25 +1,35 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 type Props = {
   onClose?: () => void;
 };
 
 const NavLinks = (props: Props) => {
-  const animateFrom = { opacity: 0, y: -40 };
-  const animateTo = { opacity: 1, y: 0 };
+  const router = useRouter();
+  const path = router.pathname;
 
   return (
     <ul>
-      <li initial={animateFrom} animate={animateTo} onClick={props.onClose}>
-        <Link href="/events">Список квизов</Link>
+      <li onClick={props.onClose}>
+        <Link href="/events">
+          <a className={path === '/events' ? 'active-link' : ''}>
+            Список квизов
+          </a>
+        </Link>
       </li>
-      <li initial={animateFrom} animate={animateTo} onClick={props.onClose}>
-        <Link href="/what-is-quiz">Что такое квиз</Link>
+      <li onClick={props.onClose}>
+        <Link href="/what-is-quiz">
+          <a className={path === '/what-is-quiz' ? 'active-link' : ''}>
+            Что такое квиз
+          </a>
+        </Link>
       </li>
-      <li initial={animateFrom} animate={animateTo} onClick={props.onClose}>
-        <Link href="/about">О нас</Link>
+      <li onClick={props.onClose}>
+        <Link href="/about">
+          <a className={path === '/about' ? 'active-link' : ''}>О нас</a>
+        </Link>
       </li>
     </ul>
   );
