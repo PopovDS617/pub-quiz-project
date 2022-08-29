@@ -1,11 +1,14 @@
 import NavLinks from './NavLinks';
 import { CgMenuRound, CgCloseO } from 'react-icons/cg';
 import React, { useState } from 'react';
+import Backdrop from '../layout/Backdrop';
+import ReactDOM from 'react-dom';
+import Overlay from '../layout/Backdrop';
 
 const MobileNavigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
-  const openMenuHandler = () => {
+  const openMenuHandler = (): void => {
     setOpenMenu(!openMenu);
   };
 
@@ -28,10 +31,13 @@ const MobileNavigation = () => {
   );
 
   return (
-    <nav className="mobile-navigation">
-      {openMenu && <NavLinks onClose={openMenuHandler} />}
-      {openMenu ? closeIcon : hambergerIcon}
-    </nav>
+    <React.Fragment>
+      <nav className="mobile-navigation">
+        {openMenu && <NavLinks onClose={openMenuHandler} />}
+        {openMenu ? closeIcon : hambergerIcon}
+      </nav>
+      {openMenu && <Backdrop onClose={openMenuHandler} />}
+    </React.Fragment>
   );
 };
 
