@@ -28,13 +28,27 @@ body {
 body {
   display: flex;
   min-height: 100vh;
-  background: rgb(81, 41, 140);
+  background-size: 300% 300% !important;
+  // background: rgb(81, 41, 140);
   background: linear-gradient(
     90deg,
     rgba(81, 41, 140, 1) 0%,
     rgba(121, 114, 179, 1) 50%,
     rgba(134, 45, 93, 1) 100%
   );
+  animation: animatebg 13s ease infinite;
+
+  @keyframes animatebg {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
 
 #__next {
@@ -146,7 +160,7 @@ a {
       font-size: clamp(1rem, 1rem + 3vw, 1.5rem);
 
       &:hover {
-        text-decoration: solid underline purple 5px;
+        text-decoration: solid underline rgb(255, 255, 255) 3px;
       }
     }
   }
