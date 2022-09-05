@@ -196,9 +196,6 @@ a {
     gap: 0.1rem;
     font-size: clamp(0.8rem, 0.5rem + 3vw, 1.4rem);
 
-    a {
-    }
-
     .active-link {
       text-decoration: solid underline rgb(255, 255, 255) 2px !important;
       text-underline-offset: 6px;
