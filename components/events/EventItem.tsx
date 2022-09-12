@@ -24,8 +24,8 @@ const EventItem = (props: EventItemType) => {
       <Image
         src={'/' + image}
         alt={title}
-        width={700}
-        height={260}
+        width={800}
+        height={270}
         objectFit="cover"
         objectPosition="100% 31%"
         quality="70"
