@@ -6,7 +6,7 @@ import NewsSubscription from '../components/input/NewsSubscription';
 import Notification from '../components/notification/Notification';
 import NotificationContext from '../store/notification-context';
 
-const about = () => {
+const About = () => {
   const notificationCtx = useContext(NotificationContext);
 
   const activeNotification = notificationCtx.notification;
@@ -52,4 +52,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
