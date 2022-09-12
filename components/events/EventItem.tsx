@@ -28,14 +28,14 @@ const EventItem = (props: EventItemType) => {
           objectFit="cover"
           // width={900}
           // height={300}
-          // objectFit="cover"
-          sizes="(max-width: 400px) 300px,
-          (max-width: 768px) 450px,
+          sizes="(max-width: 400px) 180px,
+          (max-width: 768px) 400px,
           (max-width: 1200px) 900px"
           objectPosition="100% 29%"
           quality="70"
           placeholder="blur"
           blurDataURL={'/' + image}
+          lazyBoundary="200px"
         />
       </div>
 

@@ -9,16 +9,17 @@ type EventListProps = {
 const EventList = (props: EventListProps) => {
   return (
     <ul className="event-list">
-      {props.items.map((el) => (
-        <EventItem
-          id={el.id}
-          key={el.id}
-          title={el.title}
-          date={el.date}
-          image={el.image}
-          location={el.location}
-        />
-      ))}
+      {props?.items &&
+        props.items.map((el) => (
+          <EventItem
+            id={el.id}
+            key={el.id}
+            title={el.title}
+            date={el.date}
+            image={el.image}
+            location={el.location}
+          />
+        ))}
     </ul>
   );
 };

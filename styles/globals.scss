@@ -26,7 +26,6 @@ body {
 }
 
 body {
-  scroll-behavior: smooth;
   display: flex;
   min-height: 100vh;
   background-size: 300% 300% !important;
@@ -135,6 +134,7 @@ a {
     }
 
     a {
+      font-weight: bold;
       padding: 0.5rem;
       text-decoration: none;
       color: #fefcfe;
@@ -206,6 +206,7 @@ a {
     }
 
     ul li a {
+      font-weight: bold;
       text-decoration: none;
       color: #fefcfe;
     }
@@ -338,6 +339,10 @@ a {
     position: relative;
     height: 20rem;
     width: 100%;
+
+    @media (max-width: 450px) {
+      height: 8rem;
+    }
   }
 
   h2 {
