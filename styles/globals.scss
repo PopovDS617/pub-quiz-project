@@ -26,6 +26,7 @@ body {
 }
 
 body {
+  scroll-behavior: smooth;
   display: flex;
   min-height: 100vh;
   background-size: 300% 300% !important;
