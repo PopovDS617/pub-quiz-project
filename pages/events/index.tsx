@@ -21,10 +21,10 @@ const AllEventsPage = (props: AllEventsPageProps) => {
   };
 
   useEffect(() => {
-    return async function fetchData() {
-      const eventList = await fetchEvents();
+    async function fetchData() {
+      const eventList: any = await fetchEvents();
       setEvents(eventList);
-    };
+    }
   }, []);
 
   return (
