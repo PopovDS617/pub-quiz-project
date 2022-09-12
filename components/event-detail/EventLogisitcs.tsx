@@ -29,12 +29,13 @@ const EventLogistics = (props: EventLogisticsProps) => {
         <Image
           src={`/${image}`}
           alt={imageAlt}
-          width={520}
-          height={320}
           layout="fill"
+          sizes="(max-width: 400px) 180px,
+          (max-width: 768px) 400px,
+          (max-width: 1200px) 900px"
           objectFit="cover"
           placeholder="blur"
-          blurDataURL={`/${image}`}
+          blurDataURL={'/images/blur.jpg'}
         />
       </div>
       <ul className="event-details-logistics-list">

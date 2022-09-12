@@ -17,23 +17,20 @@ const EventItem = (props: EventItemType) => {
 
   const formattedAddress = location!.replace(', ', '\n');
   const detailsLink = `/events/${id}`;
-
+  const imageSrc = `/${image}`;
   return (
     <li key={id} className="event-item">
       <div className="event-image-container">
         <Image
           className="event-item-image"
-          src={'/' + image}
+          src={imageSrc}
           alt={title}
           layout="fill"
-          // width={900}
-          // height={300}
           sizes="(max-width: 400px) 180px,
           (max-width: 768px) 400px,
           (max-width: 1200px) 900px"
           placeholder="blur"
-          blurDataURL={'/' + image}
-          // lazyBoundary="200px"
+          blurDataURL={'/images/blur.jpg'}
         />
       </div>
 
