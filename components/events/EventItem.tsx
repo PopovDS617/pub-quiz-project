@@ -5,6 +5,7 @@ import Button from '../UI/Button';
 import DateIcon from '../UI/Icons/date-icon';
 import ArrowRightIcon from '../UI/Icons/arrow-right-icon';
 import AddressIcon from '../UI/Icons/address-icon';
+import Spinner from '../UI/Spinner';
 
 const EventItem = (props: EventItemType) => {
   const { title, image, date, location, id } = props;
@@ -23,11 +24,13 @@ const EventItem = (props: EventItemType) => {
       <Image
         src={'/' + image}
         alt={title}
-        width={900}
-        height={310}
+        width={700}
+        height={260}
         objectFit="cover"
         objectPosition="100% 31%"
-        quality="75"
+        quality="70"
+        placeholder="blur"
+        blurDataURL={'/' + image}
       />
 
       <div className="event-item-content">

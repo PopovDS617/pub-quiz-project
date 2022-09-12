@@ -14,7 +14,13 @@ const NavLinks = (props: Props) => {
     <ul>
       <li onClick={props.onClose}>
         <Link href="/events">
-          <a className={path === '/events' ? 'active-link' : ''}>
+          <a
+            className={
+              path === '/events' || path === '/events/[...slug]'
+                ? 'active-link'
+                : ''
+            }
+          >
             Список квизов
           </a>
         </Link>

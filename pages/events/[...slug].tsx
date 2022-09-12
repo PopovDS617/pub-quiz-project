@@ -80,7 +80,7 @@ export const getServerSideProps = async (
   const filterData = params?.slug;
 
   if (!filterData) {
-    return <p className="loading">загружаемся...</p>;
+    return <p>Загрузка . . .</p>;
   }
 
   const filteredYear = filterData[0];

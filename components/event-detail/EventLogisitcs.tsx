@@ -34,6 +34,8 @@ const EventLogistics = (props: EventLogisticsProps) => {
           quality="90"
           layout="intrinsic"
           objectFit="cover"
+          placeholder="blur"
+          blurDataURL={`/${image}`}
         />
       </div>
       <ul className="event-details-logistics-list">

@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { EventItemType } from '../../models';
 import Head from 'next/head';
 import React from 'react';
+import Spinner from '../../components/UI/Spinner';
 
 type AllEventsPageProps = {
   events: EventItemType[];
@@ -34,6 +35,10 @@ const AllEventsPage = (props: AllEventsPageProps) => {
 
 export async function getStaticProps() {
   const eventList = await fetchEvents();
+
+  if (!eventList) {
+    return <Spinner />;
+  }
 
   return {
     props: {

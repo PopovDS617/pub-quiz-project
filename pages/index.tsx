@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Button from '../components/UI/Button';
+import Spinner from '../components/UI/Spinner';
 
 const HomePage = () => {
   return (
@@ -14,16 +15,8 @@ const HomePage = () => {
 
       <div className="home-container">
         <section className="home-section">
-          <div className="home-img">
-            <Image
-              src="/images/icon-transformed.png"
-              alt="смузи логотип"
-              width={320}
-              height={320}
-              quality="90"
-              layout="intrinsic"
-              objectFit="cover"
-            />
+          <div className="home-spinner">
+            <Spinner />
           </div>
 
           <p>

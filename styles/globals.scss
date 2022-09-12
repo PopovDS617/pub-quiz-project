@@ -217,6 +217,7 @@ a {
 }
 
 .home-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,11 +238,9 @@ a {
   }
 }
 
-.home-img {
-  max-width: 25rem;
-  width: 30%;
-  text-align: center;
-  z-index: 1;
+.home-spinner {
+  height: 35vh;
+  z-index: -1;
 }
 
 .newsletter {
