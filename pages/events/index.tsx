@@ -25,6 +25,7 @@ const AllEventsPage = (props: AllEventsPageProps) => {
       const eventList: any = await fetchEvents();
       setEvents(eventList);
     }
+    fetchData();
   }, []);
 
   return (
