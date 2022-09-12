@@ -29,10 +29,9 @@ const EventLogistics = (props: EventLogisticsProps) => {
         <Image
           src={`/${image}`}
           alt={imageAlt}
-          width={320}
+          width={520}
           height={320}
-          quality="90"
-          layout="intrinsic"
+          layout="fill"
           objectFit="cover"
           placeholder="blur"
           blurDataURL={`/${image}`}

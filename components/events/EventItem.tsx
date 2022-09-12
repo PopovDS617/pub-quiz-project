@@ -22,20 +22,18 @@ const EventItem = (props: EventItemType) => {
     <li key={id} className="event-item">
       <div className="event-image-container">
         <Image
+          className="event-item-image"
           src={'/' + image}
           alt={title}
           layout="fill"
-          objectFit="cover"
           // width={900}
           // height={300}
           sizes="(max-width: 400px) 180px,
           (max-width: 768px) 400px,
           (max-width: 1200px) 900px"
-          objectPosition="100% 29%"
-          quality="70"
           placeholder="blur"
           blurDataURL={'/' + image}
-          lazyBoundary="200px"
+          // lazyBoundary="200px"
         />
       </div>
 
