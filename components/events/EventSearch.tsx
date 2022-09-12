@@ -1,4 +1,4 @@
-import React, { FormEvent, useRef } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import Button from '../UI/Button';
 
 type EventSearchProps = {
@@ -6,14 +6,19 @@ type EventSearchProps = {
 };
 
 const EventSearch = (props: EventSearchProps) => {
-  const yearInputRef = useRef<HTMLSelectElement>(null);
-  const monthInputRef = useRef<HTMLSelectElement>(null);
+  const [selectedYear, setSelectedYear] = useState<string>('2022');
+  const [selectedMonth, setSelectedMonth] = useState<string>('01');
+  const selectMonthHandler = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedMonth(event.target.value);
+  };
+  const selectYearHandler = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedYear(event.target.value);
+  };
 
   const submitHandler = (event: FormEvent) => {
     event.preventDefault();
-    const selectedYear = yearInputRef.current?.value;
-    const selectedMonth = monthInputRef.current?.value;
-    props.onSearch(selectedYear!, selectedMonth!);
+
+    props.onSearch(selectedYear, selectedMonth);
   };
 
   return (
@@ -22,14 +27,22 @@ const EventSearch = (props: EventSearchProps) => {
         <div className="event-search-controls">
           <div className="event-search-control">
             <label htmlFor="year">год</label>
-            <select defaultValue={'2022'} id="year" ref={yearInputRef}>
+            <select
+              defaultValue={selectedYear}
+              id="year"
+              onChange={selectYearHandler}
+            >
               <option value="2021">2021</option>
               <option value="2022">2022</option>
             </select>
           </div>
           <div className="event-search-control">
             <label htmlFor="month">месяц</label>
-            <select id="month" ref={monthInputRef}>
+            <select
+              id="month"
+              onChange={selectMonthHandler}
+              defaultValue={selectedMonth}
+            >
               <option value="01">Январь</option>
               <option value="02">Февраль</option>
               <option value="03">Март</option>
