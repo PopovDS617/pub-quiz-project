@@ -299,6 +299,7 @@ a {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border: 1px solid #ccc;
+  outline: 0;
 }
 
 .newsletter button:hover,
@@ -645,7 +646,6 @@ a {
   padding: 1rem;
   background-color: #1a003d;
   border-radius: 6px;
-
   max-width: 50rem;
   display: flex;
   justify-content: space-between;
@@ -843,4 +843,116 @@ a {
 
 .status-error {
   background-color: #e65035;
+}
+
+.rating-container {
+  margin-top: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// .rating-head {
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-evenly;
+//   font-size: clamp(1.1rem, 0.3rem + 2vw, 1.9rem);
+//   margin: 1rem;
+//   text-align: center;
+//   div {
+//     padding: 1rem;
+//   }
+// }
+
+.rating-body-container {
+  margin-top: 1rem;
+  width: 100%;
+  border: solid 2px white;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 40rem) {
+    width: 80%;
+  }
+}
+
+.rating-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: clamp(0.9rem, 0.3rem + 2vw, 1.6rem);
+  margin: 1rem;
+  text-align: center;
+
+  div {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .rating-team-name {
+    padding-left: 2rem;
+    text-align: left;
+  }
+}
+
+.rating-head-row {
+  @extend .rating-row;
+  border-bottom: solid 2px white;
+  margin-top: 0;
+}
+
+.team-search-form {
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input {
+    padding: 0.3rem;
+    width: 60%;
+    font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
+    font-family: inherit;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 0;
+    height: 2.7rem;
+
+    outline: 0;
+
+    @media (min-width: 40rem) {
+      width: 30%;
+    }
+  }
+  button {
+    width: 7rem;
+    padding: 0.3rem;
+    font-size: clamp(0.7rem, 0.5rem + 1vw, 1.7rem);
+    font-family: inherit;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 0;
+    height: 2.7rem;
+    text-decoration: none;
+    cursor: pointer;
+
+    background-color: $success-green;
+
+    color: white;
+
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+
+    &:hover,
+    &:active {
+      transition: background-color 0.3s;
+      background-color: $secondary-pink;
+    }
+  }
 }

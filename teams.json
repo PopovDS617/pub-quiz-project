@@ -1,0 +1,673 @@
+{
+  "events": {
+    "e1": {
+      "date": "2022-08-16",
+      "description": "Давно не вспоминали всеми любимые мультфильмы, пора исправляться! Примерно 15-20% русских мультфильмов и мультсериалов, остальное зарубежное",
+      "id": "e1",
+      "image": "images/guess-cartoon-15.jpg",
+      "isFeatured": true,
+      "location": "Живаго, ул. Максима Горького 11/43",
+      "title": "Угадай мультфильм №15"
+    },
+    "e10": {
+      "date": "2022-07-03",
+      "description": "Наш традиционный киноквиз снова в деле! Большая часть фильмов зарубежная, русского совсем чуть-чуть. Видео-туры, сюжеты, стоп-кадры и прочие механики туров",
+      "id": "e10",
+      "image": "images/guess-movie-18.jpg",
+      "isFeatured": false,
+      "location": "Фрау Мюллер, ул. Береговая 29А",
+      "title": "Угадай фильм №18"
+    },
+    "e2": {
+      "date": "2022-08-14",
+      "description": "Снова собираемся отгадать 100 фильмов. Большая часть фильмов зарубежная, русского совсем чуть-чуть. Видео-туры, сюжеты, стоп-кадры и прочие механики туров",
+      "id": "e2",
+      "image": "images/guess-movie-19.jpg",
+      "isFeatured": true,
+      "location": "Фрау Мюллер, ул. Береговая 29А",
+      "title": "Угадай фильм №19"
+    },
+    "e3": {
+      "date": "2022-08-07",
+      "description": "Больше года мы не делали квизы, где половина вопросов по музыке, а половина по фильмам. И зря, наверное, ведь некоторые команды настойчиво просят такие игры. Ну что же, давайте их возобновим!",
+      "id": "e3",
+      "image": "images/music-movies-2.jpg",
+      "isFeatured": true,
+      "location": "Живаго, ул. Максима Горького 11/43",
+      "title": "Музыка и кино №2"
+    },
+    "e4": {
+      "date": "2022-08-04",
+      "description": "Очередной зажигательный музыкальный квиз уже скоро! На этот раз пройдёмся по эпохе 1990-2010 годов. Будет примерно поровну русской и зарубежной музыки",
+      "id": "e4",
+      "image": "images/guess-music-1990-2010-3.jpg",
+      "isFeatured": false,
+      "location": "Большой Сад, ул. Красноармейская 105",
+      "title": "Угадай мелодию 1990-2010 №3"
+    },
+    "e5": {
+      "date": "2022-07-31",
+      "description": "День, которого с трепетом ждут все поттероманы, чтобы поднять бокал тыквенного сока за самого храброго, доброго и самоотверженного мальчика в истории!",
+      "id": "e5",
+      "image": "images/birthday-of-harry-potter.jpg",
+      "isFeatured": false,
+      "location": "Фрау Мюллер, ул. Береговая 29А",
+      "title": "День Рождения Гарри Поттера"
+    },
+    "e6": {
+      "date": "2022-07-25",
+      "description": "И снова очень популярный формат в виде смеси фильмов, мультфильмов и сериалов. Примерно поровну вопросов по всем трём направлениям. Ждём всех ценителей!",
+      "id": "e6",
+      "image": "images/movies-cartoons-series-9.jpg",
+      "isFeatured": false,
+      "location": "Фрау Мюллер, ул. Береговая 29А",
+      "title": "КМС. Кино, мультики, сериалы №2"
+    },
+    "e7": {
+      "date": "2022-07-13",
+      "description": "Ого-го! снова квиз по Друзьям! Так соскучились, что уже и в резерве довольно много команд, постараемся вместить по максимуму и проведём время в компании любимого сериала",
+      "id": "e7",
+      "image": "images/friends-6.jpg",
+      "isFeatured": false,
+      "location": "Живаго, ул. Максима Горького 11/43",
+      "title": "F.R.I.E.N.D.S. №6"
+    },
+    "e8": {
+      "date": "2022-07-09",
+      "description": "Собираем кунов и тян на квиз, где надо отгадать 100 разных аниме. Быстрый квиз без повторов, но самое главное - очень атмосферный!",
+      "id": "e8",
+      "image": "images/guess-anime-4.jpg",
+      "isFeatured": false,
+      "location": "Эйнштейн, ул. Зорге 17",
+      "title": "Угадай аниме №4"
+    },
+    "e9": {
+      "date": "2022-07-09",
+      "description": "Готовы снова зажечь в Большом Саду? На этот раз у нас в меню музыка нулевых, от которой мурашки по коже. Будет примерно поровну русской и зарубежной музыки",
+      "id": "e9",
+      "image": "images/guess-music-2000-3.jpg",
+      "isFeatured": false,
+      "location": "Большой Сад, ул. Красноармейская 105",
+      "title": "Угадай мелодию. Музыка 2000-х №3"
+    }
+  },
+
+  "teams": {
+    "t1": {
+      "id": "t1",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t2": {
+      "id": "t2",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t3": {
+      "id": "t3",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t4": {
+      "id": "t4",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t5": {
+      "id": "t5",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t6": {
+      "id": "t6",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t7": {
+      "id": "t7",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t8": {
+      "id": "t8",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t9": {
+      "id": "t9",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t10": {
+      "id": "t10",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t11": {
+      "id": "t11",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t12": {
+      "id": "t12",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t13": {
+      "id": "t13",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t14": {
+      "id": "t14",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t15": {
+      "id": "t15",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t16": {
+      "id": "t16",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t17": {
+      "id": "t17",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t18": {
+      "id": "t18",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t19": {
+      "id": "t19",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t20": {
+      "id": "t20",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t21": {
+      "id": "t21",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t22": {
+      "id": "t22",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t23": {
+      "id": "t23",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t24": {
+      "id": "t24",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t25": {
+      "id": "t25",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t26": {
+      "id": "t26",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t27": {
+      "id": "t27",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t28": {
+      "id": "t28",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t29": {
+      "id": "t29",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t30": {
+      "id": "t30",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t31": {
+      "id": "t31",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    },
+    "t32": {
+      "id": "t32",
+      "name": "xxx",
+      "points": {
+        "year2021": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        },
+        "year2022": {
+          "winter": { "games": "5", "points": "50" },
+          "spring": { "games": "5", "points": "50" },
+          "summer": { "games": "5", "points": "50" },
+          "autumn": { "games": "5", "points": "50" }
+        }
+      }
+    }
+  }
+}

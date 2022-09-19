@@ -8,3 +8,16 @@ export type EventItemType = {
   image?: string;
   isFeatured?: boolean;
 };
+
+export type TeamType = {
+  id: string;
+  name: string;
+  points: {
+    [year: string]: {
+      [season: string]: {
+        games: number;
+        points: number;
+      };
+    };
+  };
+};
