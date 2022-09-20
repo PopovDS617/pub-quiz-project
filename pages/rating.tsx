@@ -1,35 +1,91 @@
-import React from 'react';
-import TeamItem from '../components/teams/TeamItem';
-import { TeamType } from '../models';
+import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { fetchTeams } from '../utilities/fetch-util';
-import { getGames, getPoints } from '../utilities/teams-util';
-import SearchBar from '../components/input/SearchBar';
+import TeamTable from '../components/teams/TeamTable';
+import { getPoints, getGames } from '../utilities/teams-util';
+
+type TeamProp = {
+  id: string;
+  name: string;
+  allPoints: number;
+  allGames: number;
+  points: {
+    [year: string]: {
+      [season: string]: {
+        games: number;
+        points: number;
+      };
+    };
+  };
+};
 
 type Props = {
-  teams: TeamType[];
+  teams: TeamProp[];
 };
 
 const RatingPage = (props: Props) => {
+  const sortHandler = (sortMode: any) => {
+    let result = props.teams.map((team, index) => {
+      return {
+        ...team,
+
+        allGames: getGames(team.points, sortMode.year, sortMode.season),
+        allPoints: getPoints(team.points, sortMode.year, sortMode.season),
+      };
+    });
+
+    if (sortMode.type === 'byPoints') {
+      result = result.sort((a, b) => (a.allPoints > b.allPoints ? -1 : 1));
+    }
+    if (sortMode.type === 'byGames') {
+      result = result.sort((a, b) => (a.allGames - b.allGames ? -1 : 1));
+    }
+
+    return result;
+  };
+
+  const [sortState, setSortState] = useState({
+    type: 'byPoints',
+    year: 'all',
+    season: 'all',
+  });
+  const sortedTeams = sortHandler(sortState);
+  const slicedTeams = sortedTeams.slice(0, 10);
+  const [teamList, setTeamList] = useState(slicedTeams);
+  const [searchText, setSearchText] = useState('');
+
+  const submitHandler = (event: FormEvent) => {
+    event.preventDefault();
+    const filteredTeams = props.teams.filter((team) =>
+      team.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+
+    setTeamList(filteredTeams);
+  };
+
+  const inputHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchText(event.target.value);
+  };
+
+  useEffect(() => {
+    if (searchText.length <= 2) {
+      setTeamList(slicedTeams);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchText.length]);
+
   return (
     <div className="rating-container">
-      <SearchBar />
+      <form className="team-search-form" onSubmit={submitHandler}>
+        <input
+          type="text"
+          placeholder="название команды"
+          onChange={inputHandler}
+          value={searchText}
+        />
+        <button disabled={searchText.length <= 2 ? true : false}>найти</button>
+      </form>
 
-      <div className="rating-body-container">
-        <div className="rating-head-row">
-          <div className="rating-head-name">Название</div>
-          <div className="rating-head-games">Игры</div>
-          <div className="rating-head-points">Баллы</div>
-        </div>
-        {props.teams.map((team) => (
-          <div className="rating-row" key={Math.random() * 100}>
-            <TeamItem
-              name={team.name}
-              games={getGames(team.points, 'all', 'all')}
-              points={getPoints(team.points, 'all', 'all')}
-            />
-          </div>
-        ))}
-      </div>
+      <TeamTable teams={teamList} sortState={sortState} />
     </div>
   );
 };
@@ -37,9 +93,17 @@ const RatingPage = (props: Props) => {
 export const getStaticProps = async () => {
   const teams = await fetchTeams();
 
+  const mappedTeams = teams.map((team) => {
+    return {
+      ...team,
+      allGames: getGames(team.points, 'all', 'all'),
+      allPoints: getPoints(team.points, 'all', 'all'),
+    };
+  });
+
   return {
     props: {
-      teams: teams,
+      teams: mappedTeams,
     },
   };
 };

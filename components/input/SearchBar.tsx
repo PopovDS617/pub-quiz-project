@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 
-type Props = {};
-
-const SearchBar = (props: Props) => {
-  return (
-    <form className="team-search-form">
-      <input type="text" placeholder="название команды" />
-      <button>найти</button>
-    </form>
-  );
+type Props = {
+  onSearch: () => void;
+  onCancelSearch: () => void;
 };
+
+const SearchBar = (props: Props) => {};
 
 export default SearchBar;
