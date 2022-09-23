@@ -39,3 +39,20 @@ export async function getFilteredEvents(dateFilter: GetFilteredArguments) {
 
   return filteredEvents;
 }
+
+export const fetchTeams = async () => {
+  const response = await fetch(
+    `https://${process.env.firebaseRoute}/teams.json`
+  );
+
+  const data = await response.json();
+
+  const teams = [];
+  for (const key in data) {
+    teams.push({
+      id: key,
+      ...data[key],
+    });
+  }
+  return teams;
+};

@@ -26,6 +26,13 @@ const NavLinks = (props: Props) => {
         </Link>
       </li>
       <li onClick={props.onClose}>
+        <Link href="/rating">
+          <a className={path === '/rating' ? 'active-link' : ''}>
+            Рейтинг команд
+          </a>
+        </Link>
+      </li>
+      <li onClick={props.onClose}>
         <Link href="/what-is-quiz">
           <a className={path === '/what-is-quiz' ? 'active-link' : ''}>
             Что такое квиз
