@@ -2,6 +2,7 @@ import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { fetchTeams } from '../utilities/fetch-util';
 import TeamTable from '../components/teams/TeamTable';
 import { getPoints, getGames } from '../utilities/teams-util';
+import FilterSelectors from '../components/teams/FilterSelectors';
 
 type TeamProp = {
   id: string;
@@ -23,8 +24,8 @@ type Props = {
 };
 
 const RatingPage = (props: Props) => {
-  const sortHandler = (sortMode: any) => {
-    let result = props.teams.map((team, index) => {
+  const sortTeams = (sortMode: any) => {
+    let result = props.teams.map((team) => {
       return {
         ...team,
 
@@ -48,9 +49,9 @@ const RatingPage = (props: Props) => {
     year: 'all',
     season: 'all',
   });
-  const sortedTeams = sortHandler(sortState);
-  const slicedTeams = sortedTeams.slice(0, 10);
-  const [teamList, setTeamList] = useState(slicedTeams);
+
+  // const slicedTeams = sortedTeams.slice(0, 10);
+  const [teamList, setTeamList] = useState(props.teams);
   const [searchText, setSearchText] = useState('');
 
   const submitHandler = (event: FormEvent) => {
@@ -65,13 +66,32 @@ const RatingPage = (props: Props) => {
   const inputHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchText(event.target.value);
   };
+  const filterHandler = (selected: typeof sortState) => {
+    setSortState((prev) => ({
+      ...prev,
+      season: selected.season,
+      year: selected.year,
+    }));
+    setSearchText('');
+  };
+
+  const sortHandler = (type: string) => {
+    setSortState((prev) => ({
+      ...prev,
+      type,
+    }));
+  };
 
   useEffect(() => {
-    if (searchText.length <= 2) {
-      setTeamList(slicedTeams);
+    setTeamList(sortTeams(sortState));
+  }, [sortState]);
+
+  useEffect(() => {
+    if (searchText.length === 0) {
+      setTeamList(sortTeams(sortState));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchText.length]);
+  }, [searchText.length, sortState]);
 
   return (
     <div className="rating-container">
@@ -84,8 +104,8 @@ const RatingPage = (props: Props) => {
         />
         <button disabled={searchText.length <= 2 ? true : false}>найти</button>
       </form>
-
-      <TeamTable teams={teamList} sortState={sortState} />
+      <FilterSelectors onFilterTeams={filterHandler} />
+      <TeamTable teams={teamList} sortState={sortState} onSort={sortHandler} />
     </div>
   );
 };

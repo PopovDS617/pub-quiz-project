@@ -20,4 +20,6 @@ export type TeamType = {
       };
     };
   };
+  allGames: number;
+  allPoints: number;
 };
