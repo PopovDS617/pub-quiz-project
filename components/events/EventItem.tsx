@@ -15,7 +15,7 @@ const EventItem = (props: EventItemType) => {
     year: 'numeric',
   });
 
-  const formattedAddress = location!.replace(', ', '\n');
+  const formattedAddress = location?.replace(', ', '\n');
   const detailsLink = `/events/${id}`;
   const imageSrc = `/${image}`;
   return (
