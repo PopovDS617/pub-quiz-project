@@ -13,10 +13,10 @@ const About = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Смузи квиз - контакты</title>
+        <title>Просто Квиз - контакты</title>
         <meta
           name="desription"
-          content="телефон +7 (928) 966-49-10 группа вконтакте https://vk.com/smuzi_rostov"
+          content="телефон +7 (928) 000-00-00 группа вконтакте https://vk.com/xxx"
         />
       </Head>
 
@@ -28,14 +28,14 @@ const About = () => {
               <PhoneIcon />
             </span>
 
-            <span>+7 (928) 966-49-10</span>
+            <span>+7 (928) 000-00-00</span>
           </div>
           <div className="contacts-item">
             <span className="contacts-icon">
               <Regicon />
             </span>
             <span>
-              <a href="https://vk.com/smuzi_rostov"> группа Вконтакте </a>
+              <a href=""> группа Вконтакте </a>
             </span>
           </div>
         </section>

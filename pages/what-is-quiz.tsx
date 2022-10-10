@@ -6,7 +6,7 @@ const WhatIsQuiz = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Смузи квиз</title>
+        <title>Наш квиз</title>
         <meta name="desription" content="что такое квиз?" />
       </Head>
 

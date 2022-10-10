@@ -21,8 +21,8 @@ const AllEventsPage = (props: AllEventsPageProps) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Смузи квиз</title>
-        <meta name="desription" content="Смузи квиз Ростов-на-Дону" />
+        <title>Просто квиз</title>
+        <meta name="desription" content="Наш квиз Ростов-на-Дону" />
       </Head>
       <div className="main-list-container">
         <EventSearch onSearch={filterEvents} />

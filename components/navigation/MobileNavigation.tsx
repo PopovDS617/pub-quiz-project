@@ -2,8 +2,6 @@ import NavLinks from './NavLinks';
 import { CgMenuRound, CgCloseO } from 'react-icons/cg';
 import React, { useState } from 'react';
 import Backdrop from '../layout/Backdrop';
-import ReactDOM from 'react-dom';
-import Overlay from '../layout/Backdrop';
 
 const MobileNavigation = () => {
   const [openMenu, setOpenMenu] = useState(false);

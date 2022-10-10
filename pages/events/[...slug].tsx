@@ -19,8 +19,8 @@ const FilteredEventsPage = (props: FilteredEventsPageProps) => {
 
   const pageHead = (
     <Head>
-      <title>Смузи квиз</title>
-      <meta name="desription" content="Смузи квиз Ростов-на-Дону" />
+      <title>Просто квиз</title>
+      <meta name="desription" content="Просто квиз Ростов-на-Дону" />
     </Head>
   );
 

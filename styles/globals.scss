@@ -26,6 +26,7 @@ body {
 }
 
 body {
+  overflow: overlay;
   background-size: 300% 300% !important;
   background: rgb(81, 41, 140);
   background: linear-gradient(
@@ -233,15 +234,34 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2.5rem);
 
-  p {
-    text-align: justify;
+  .home-text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    .home-text-desription {
+      text-align: justify;
+      font-size: inherit;
+    }
+
+    p {
+      font-size: clamp(0.8rem, 0.5rem + 2vw, 2rem);
+
+      padding: 0;
+      margin: 0.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 2rem;
+    }
   }
 }
 
 .home-spinner {
-  height: 35vh;
+  height: 25vh;
   z-index: 1;
 }
 
@@ -625,7 +645,7 @@ a {
 }
 
 .event-search-container {
-  margin: 1rem auto;
+  margin: 1rem auto 0;
   display: flex;
   width: 100%;
 
@@ -635,7 +655,7 @@ a {
 
 .event-search-form {
   width: 80%;
-  margin: 2rem 2rem;
+  margin: 0.5rem 2rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   background-color: #1a003d;
@@ -746,9 +766,10 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1rem 2rem;
+  padding: 1rem 1rem 1rem;
 
   h1 {
+    margin: 0;
     font-size: 1.5rem;
     text-align: center;
     @media (min-width: 40rem) {

@@ -49,11 +49,11 @@ const EventLogistics = (props: EventLogisticsProps) => {
           400 рублей с игрока (оплата на месте наличными или картой)
         </LogisticsItem>
         <LogisticsItem icon={RegIcon}>
-          <a href="https://vk.cc/aCKqKG">ссылка для регистрации</a>
+          <a href="">ссылка для регистрации</a>
         </LogisticsItem>
         <LogisticsItem icon={ChatIcon}>
           Осталиcь вопросы?
-          <a href="https://vk.me/smuzi_rostov"> Пишите нам</a>
+          <a href=""> Пишите нам</a>
         </LogisticsItem>
       </ul>
     </section>
