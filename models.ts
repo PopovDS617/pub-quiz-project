@@ -11,7 +11,7 @@ export type EventItemType = {
 
 export type TeamType = {
   id: string;
-  name: string;
+  teamName: string;
   points: {
     [year: string]: {
       [season: string]: {

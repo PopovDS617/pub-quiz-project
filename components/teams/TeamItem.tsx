@@ -1,19 +1,19 @@
 import React, { Fragment } from 'react';
-import { TeamType } from '../../models';
 
 type Props = {
   place: number;
-  name: string;
+  teamName: string;
   games: number;
   points: number;
 };
 
 const TeamItem = (props: Props) => {
-  const { name, games, points, place } = props;
+  const { teamName, games, points, place } = props;
+
   return (
     <Fragment>
       <div className="rating-team-name">
-        {place}. {name}
+        {place}. {teamName}
       </div>
       <div className="rating-team-games">{games}</div>
       <div className="rating-team-points">{points}</div>

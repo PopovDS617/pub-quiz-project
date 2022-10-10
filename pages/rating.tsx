@@ -6,7 +6,7 @@ import FilterSelectors from '../components/teams/FilterSelectors';
 
 type TeamProp = {
   id: string;
-  name: string;
+  teamName: string;
   allPoints: number;
   allGames: number;
   points: {
@@ -33,12 +33,12 @@ const RatingPage = (props: Props) => {
         allPoints: getPoints(team.points, sortMode.year, sortMode.season),
       };
     });
-
+    console.log(result);
     if (sortMode.type === 'byPoints') {
       result = result.sort((a, b) => (a.allPoints > b.allPoints ? -1 : 1));
     }
     if (sortMode.type === 'byGames') {
-      result = result.sort((a, b) => (a.allGames - b.allGames ? -1 : 1));
+      result = result.sort((a, b) => (a.allGames > b.allGames ? -1 : 1));
     }
 
     return result;
@@ -57,7 +57,7 @@ const RatingPage = (props: Props) => {
   const submitHandler = (event: FormEvent) => {
     event.preventDefault();
     const filteredTeams = props.teams.filter((team) =>
-      team.name.toLowerCase().includes(searchText.toLowerCase())
+      team.teamName.toLowerCase().includes(searchText.toLowerCase())
     );
 
     setTeamList(filteredTeams);

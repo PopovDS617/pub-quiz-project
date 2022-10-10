@@ -1,5 +1,5 @@
 import React from 'react';
-import { getGames, getPoints } from '../../utilities/teams-util';
+
 import TeamItem from './TeamItem';
 import { TeamType } from '../../models';
 
@@ -45,7 +45,7 @@ const TeamTable = (props: Props) => {
               <div className="rating-row" key={Math.random() * 100}>
                 <TeamItem
                   place={index + 1}
-                  name={team.name}
+                  teamName={team.teamName}
                   games={team.allGames}
                   points={team.allPoints}
                 />
