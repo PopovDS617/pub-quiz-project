@@ -125,6 +125,7 @@ export const getStaticProps = async () => {
     props: {
       teams: mappedTeams,
     },
+     revalidate: 1800,
   };
 };
 
