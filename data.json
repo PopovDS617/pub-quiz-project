@@ -95,7 +95,7 @@
   "teams": {
     "t1": {
       "id": "t1",
-      "teamName": "team number 0",
+      "teamName": "Ради всего спиртного!",
       "points": {
         "year2021": {
           "autumn": {
@@ -137,7 +137,7 @@
     },
     "t2": {
       "id": "t2",
-      "teamName": "team number 1",
+      "teamName": "Орущие в тутовнике",
       "points": {
         "year2021": {
           "autumn": {
@@ -179,7 +179,7 @@
     },
     "t3": {
       "id": "t3",
-      "teamName": "team number 2",
+      "teamName": "Ииизи",
       "points": {
         "year2021": {
           "autumn": {
@@ -221,7 +221,7 @@
     },
     "t4": {
       "id": "t4",
-      "teamName": "team number 3",
+      "teamName": "Карен и ребята",
       "points": {
         "year2021": {
           "autumn": {
@@ -263,7 +263,7 @@
     },
     "t5": {
       "id": "t5",
-      "teamName": "team number 4",
+      "teamName": "Обстановка по кайфу",
       "points": {
         "year2021": {
           "autumn": {
@@ -305,7 +305,7 @@
     },
     "t6": {
       "id": "t6",
-      "teamName": "team number 5",
+      "teamName": "Движение вверх",
       "points": {
         "year2021": {
           "autumn": {
@@ -347,7 +347,7 @@
     },
     "t7": {
       "id": "t7",
-      "teamName": "team number 6",
+      "teamName": "Дюдюки",
       "points": {
         "year2021": {
           "autumn": {
@@ -389,7 +389,7 @@
     },
     "t8": {
       "id": "t8",
-      "teamName": "team number 7",
+      "teamName": "Верните память",
       "points": {
         "year2021": {
           "autumn": {
@@ -431,7 +431,7 @@
     },
     "t9": {
       "id": "t9",
-      "teamName": "team number 8",
+      "teamName": "Гипертонический квиз",
       "points": {
         "year2021": {
           "autumn": {
@@ -473,7 +473,7 @@
     },
     "t10": {
       "id": "t10",
-      "teamName": "team number 9",
+      "teamName": "За себя и за Бухлю",
       "points": {
         "year2021": {
           "autumn": {
@@ -515,7 +515,7 @@
     },
     "t11": {
       "id": "t11",
-      "teamName": "team number 10",
+      "teamName": "Вуаляшки",
       "points": {
         "year2021": {
           "autumn": {
@@ -557,7 +557,7 @@
     },
     "t12": {
       "id": "t12",
-      "teamName": "team number 11",
+      "teamName": "Дятел Вудсток",
       "points": {
         "year2021": {
           "autumn": {
@@ -599,7 +599,7 @@
     },
     "t13": {
       "id": "t13",
-      "teamName": "team number 12",
+      "teamName": "Суперсемейка",
       "points": {
         "year2021": {
           "autumn": {
@@ -641,7 +641,7 @@
     },
     "t14": {
       "id": "t14",
-      "teamName": "team number 13",
+      "teamName": "Кленовый сироп",
       "points": {
         "year2021": {
           "autumn": {
@@ -683,7 +683,7 @@
     },
     "t15": {
       "id": "t15",
-      "teamName": "team number 14",
+      "teamName": "Рожденные сиять",
       "points": {
         "year2021": {
           "autumn": {
@@ -725,7 +725,7 @@
     },
     "t16": {
       "id": "t16",
-      "teamName": "team number 15",
+      "teamName": "Агенты",
       "points": {
         "year2021": {
           "autumn": {
@@ -767,7 +767,7 @@
     },
     "t17": {
       "id": "t17",
-      "teamName": "team number 16",
+      "teamName": "Ничего не вычеркиваем",
       "points": {
         "year2021": {
           "autumn": {
@@ -809,7 +809,7 @@
     },
     "t18": {
       "id": "t18",
-      "teamName": "team number 17",
+      "teamName": "Полосатый рейс",
       "points": {
         "year2021": {
           "autumn": {
@@ -851,7 +851,7 @@
     },
     "t19": {
       "id": "t19",
-      "teamName": "team number 18",
+      "teamName": "Республика Щастя",
       "points": {
         "year2021": {
           "autumn": {
@@ -893,7 +893,7 @@
     },
     "t20": {
       "id": "t20",
-      "teamName": "team number 19",
+      "teamName": "жираф Депардье",
       "points": {
         "year2021": {
           "autumn": {
@@ -935,7 +935,7 @@
     },
     "t21": {
       "id": "t21",
-      "teamName": "team number 20",
+      "teamName": "Семейка хуже Адамс",
       "points": {
         "year2021": {
           "autumn": {
@@ -977,7 +977,7 @@
     },
     "t22": {
       "id": "t22",
-      "teamName": "team number 21",
+      "teamName": "Немосквичи",
       "points": {
         "year2021": {
           "autumn": {
@@ -1019,7 +1019,7 @@
     },
     "t23": {
       "id": "t23",
-      "teamName": "team number 22",
+      "teamName": "Если не мы, то кот",
       "points": {
         "year2021": {
           "autumn": {
@@ -1061,7 +1061,7 @@
     },
     "t24": {
       "id": "t24",
-      "teamName": "team number 23",
+      "teamName": "Ежики к умате",
       "points": {
         "year2021": {
           "autumn": {
@@ -1103,7 +1103,7 @@
     },
     "t25": {
       "id": "t25",
-      "teamName": "team number 24",
+      "teamName": "Карл брат Энгельса",
       "points": {
         "year2021": {
           "autumn": {
@@ -1145,7 +1145,7 @@
     },
     "t26": {
       "id": "t26",
-      "teamName": "team number 25",
+      "teamName": "Пьяная акула",
       "points": {
         "year2021": {
           "autumn": {
@@ -1187,7 +1187,7 @@
     },
     "t27": {
       "id": "t27",
-      "teamName": "team number 26",
+      "teamName": "Космическое пространство",
       "points": {
         "year2021": {
           "autumn": {
@@ -1229,7 +1229,7 @@
     },
     "t28": {
       "id": "t28",
-      "teamName": "team number 27",
+      "teamName": "Истина где-то рядом",
       "points": {
         "year2021": {
           "autumn": {
@@ -1271,7 +1271,7 @@
     },
     "t29": {
       "id": "t29",
-      "teamName": "team number 28",
+      "teamName": "Мама, я играю в квиз, я не пью",
       "points": {
         "year2021": {
           "autumn": {
@@ -1313,7 +1313,7 @@
     },
     "t30": {
       "id": "t30",
-      "teamName": "team number 29",
+      "teamName": "Авада Кедавра",
       "points": {
         "year2021": {
           "autumn": {
@@ -1355,7 +1355,7 @@
     },
     "t31": {
       "id": "t31",
-      "teamName": "team number 30",
+      "teamName": "Гермиона, где мой Джин, Грейнджер",
       "points": {
         "year2021": {
           "autumn": {
@@ -1397,7 +1397,7 @@
     },
     "t32": {
       "id": "t32",
-      "teamName": "team number 31",
+      "teamName": "Рундел Уозлик",
       "points": {
         "year2021": {
           "autumn": {
@@ -1439,7 +1439,7 @@
     },
     "t33": {
       "id": "t33",
-      "teamName": "team number 32",
+      "teamName": "Ударила молния",
       "points": {
         "year2021": {
           "autumn": {
@@ -1481,7 +1481,7 @@
     },
     "t34": {
       "id": "t34",
-      "teamName": "team number 33",
+      "teamName": "Название съел Рон",
       "points": {
         "year2021": {
           "autumn": {
@@ -1523,7 +1523,7 @@
     },
     "t35": {
       "id": "t35",
-      "teamName": "team number 34",
+      "teamName": "Невыносимые Всезнайки",
       "points": {
         "year2021": {
           "autumn": {
@@ -1565,7 +1565,7 @@
     },
     "t36": {
       "id": "t36",
-      "teamName": "team number 35",
+      "teamName": "Хулиганы Тисовой Улицы",
       "points": {
         "year2021": {
           "autumn": {
@@ -1607,7 +1607,7 @@
     },
     "t37": {
       "id": "t37",
-      "teamName": "team number 36",
+      "teamName": "Пожиратели",
       "points": {
         "year2021": {
           "autumn": {
@@ -1649,7 +1649,7 @@
     },
     "t38": {
       "id": "t38",
-      "teamName": "team number 37",
+      "teamName": "Ааарбуз Дамблдор",
       "points": {
         "year2021": {
           "autumn": {
@@ -1691,7 +1691,7 @@
     },
     "t39": {
       "id": "t39",
-      "teamName": "team number 38",
+      "teamName": "Ласковые кудри Леонтьева",
       "points": {
         "year2021": {
           "autumn": {
@@ -1734,7 +1734,7 @@
 
     "t40": {
       "id": "t40",
-      "teamName": "team number 39",
+      "teamName": "Штырь в ботинке Майкла Джексона",
       "points": {
         "year2021": {
           "autumn": {
@@ -1776,7 +1776,7 @@
     },
     "t41": {
       "id": "t41",
-      "teamName": "team number 40",
+      "teamName": "Радужная извилина",
       "points": {
         "year2021": {
           "autumn": {
@@ -1818,7 +1818,7 @@
     },
     "t42": {
       "id": "t42",
-      "teamName": "team number 41",
+      "teamName": "Наши полномочия всё",
       "points": {
         "year2021": {
           "autumn": {
@@ -1860,7 +1860,7 @@
     },
     "t43": {
       "id": "t43",
-      "teamName": "team number 42",
+      "teamName": "Справочное бюро",
       "points": {
         "year2021": {
           "autumn": {
@@ -1902,7 +1902,7 @@
     },
     "t44": {
       "id": "t44",
-      "teamName": "team number 43",
+      "teamName": "Бесстыжие",
       "points": {
         "year2021": {
           "autumn": {
@@ -1944,7 +1944,7 @@
     },
     "t45": {
       "id": "t45",
-      "teamName": "team number 44",
+      "teamName": "Улица Садовая",
       "points": {
         "year2021": {
           "autumn": {
@@ -1986,7 +1986,7 @@
     },
     "t46": {
       "id": "t46",
-      "teamName": "team number 45",
+      "teamName": "Рожденные в 90-х",
       "points": {
         "year2021": {
           "autumn": {
@@ -2028,7 +2028,7 @@
     },
     "t47": {
       "id": "t47",
-      "teamName": "team number 46",
+      "teamName": "Время пить",
       "points": {
         "year2021": {
           "autumn": {
@@ -2070,7 +2070,7 @@
     },
     "t48": {
       "id": "t48",
-      "teamName": "team number 47",
+      "teamName": "Вишневая девятка",
       "points": {
         "year2021": {
           "autumn": {
@@ -2112,7 +2112,7 @@
     },
     "t49": {
       "id": "t49",
-      "teamName": "team number 48",
+      "teamName": "Инженеры-погромисты",
       "points": {
         "year2021": {
           "autumn": {
@@ -2154,7 +2154,7 @@
     },
     "t50": {
       "id": "t50",
-      "teamName": "team number 49",
+      "teamName": "Богемский прайд",
       "points": {
         "year2021": {
           "autumn": {
