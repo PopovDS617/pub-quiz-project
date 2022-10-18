@@ -7,7 +7,8 @@ import ErrorAlert from '../../components/UI/ErrorAlert';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { EventItemType } from '../../models';
-import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
+import { GetServerSidePropsContext } from 'next';
+import { motion } from 'framer-motion';
 
 type FilteredEventsPageProps = {
   hasError?: boolean;
@@ -15,6 +16,12 @@ type FilteredEventsPageProps = {
 };
 
 const FilteredEventsPage = (props: FilteredEventsPageProps) => {
+  const options = {
+    hidden: { opacity: 0, x: 0, y: 20 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 20 },
+  };
+
   const router = useRouter();
 
   const pageHead = (
@@ -64,10 +71,16 @@ const FilteredEventsPage = (props: FilteredEventsPageProps) => {
   return (
     <React.Fragment>
       {pageHead}
-      <div>
+      <motion.div
+        variants={options}
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        transition={{ duration: 0.8, delay: 0.1 }}
+      >
         <EventSearch onSearch={filterEvents} />
         <EventList items={props.filteredEvents} />
-      </div>
+      </motion.div>
     </React.Fragment>
   );
 };

@@ -1,8 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 const WhatIsQuiz = () => {
+  const options = {
+    hidden: { opacity: 0, x: 0, y: 20 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 20 },
+  };
+
   return (
     <React.Fragment>
       <Head>
@@ -10,7 +17,14 @@ const WhatIsQuiz = () => {
         <meta name="desription" content="что такое квиз?" />
       </Head>
 
-      <div className="whatisquiz-container">
+      <motion.div
+        className="whatisquiz-container"
+        variants={options}
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        transition={{ duration: 0.8, delay: 0.1 }}
+      >
         <section className="whatisquiz-section">
           <h1>Что такое квиз?</h1>
           <p>
@@ -52,7 +66,7 @@ const WhatIsQuiz = () => {
             место
           </p>
         </section>
-      </div>
+      </motion.div>
     </React.Fragment>
   );
 };

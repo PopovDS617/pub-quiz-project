@@ -1,5 +1,6 @@
 import React from 'react';
 import MainHeader from './MainHeader';
+import { motion } from 'framer-motion';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -9,7 +10,7 @@ const Layout = (props: LayoutProps) => {
   return (
     <React.Fragment>
       <MainHeader />
-      <main className="layout">{props.children}</main>
+      <div className="layout">{props.children}</div>
     </React.Fragment>
   );
 };

@@ -3,6 +3,7 @@ import { fetchTeams } from '../utilities/fetch-util';
 import TeamTable from '../components/teams/TeamTable';
 import { getPoints, getGames } from '../utilities/teams-util';
 import FilterSelectors from '../components/teams/FilterSelectors';
+import { motion } from 'framer-motion';
 
 type TeamProp = {
   id: string;
@@ -24,6 +25,12 @@ type Props = {
 };
 
 const RatingPage = (props: Props) => {
+  const options = {
+    hidden: { opacity: 0, x: 0, y: 20 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 20 },
+  };
+
   const sortTeams = (sortMode: any) => {
     let result = props.teams.map((team) => {
       return {
@@ -33,7 +40,7 @@ const RatingPage = (props: Props) => {
         allPoints: getPoints(team.points, sortMode.year, sortMode.season),
       };
     });
-    console.log(result);
+
     if (sortMode.type === 'byPoints') {
       result = result.sort((a, b) => (a.allPoints > b.allPoints ? -1 : 1));
     }
@@ -94,7 +101,14 @@ const RatingPage = (props: Props) => {
   }, [searchText.length, sortState]);
 
   return (
-    <div className="rating-container">
+    <motion.div
+      className="rating-container"
+      variants={options}
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      transition={{ duration: 0.8, delay: 0.1 }}
+    >
       <form className="team-search-form" onSubmit={submitHandler}>
         <input
           type="text"
@@ -106,7 +120,7 @@ const RatingPage = (props: Props) => {
       </form>
       <FilterSelectors onFilterTeams={filterHandler} />
       <TeamTable teams={teamList} sortState={sortState} onSort={sortHandler} />
-    </div>
+    </motion.div>
   );
 };
 
@@ -125,7 +139,7 @@ export const getStaticProps = async () => {
     props: {
       teams: mappedTeams,
     },
-     revalidate: 1800,
+    revalidate: 1800,
   };
 };
 

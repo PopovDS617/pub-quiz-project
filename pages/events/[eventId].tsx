@@ -6,12 +6,18 @@ import EventSummary from '../../components/event-detail/EventSummary';
 import EventLogistics from '../../components/event-detail/EventLogisitcs';
 import EventContent from '../../components/event-detail/EventContent';
 import { fetchEvents } from '../../utilities/fetch-util';
-
+import { motion } from 'framer-motion';
 type EventDetailProps = {
   event: EventItemType;
 };
 
 const EventDetailPage = (props: EventDetailProps) => {
+  const options = {
+    hidden: { opacity: 0, x: 0, y: 20 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 20 },
+  };
+
   const event: any = props.event;
 
   if (!event) {
@@ -19,7 +25,14 @@ const EventDetailPage = (props: EventDetailProps) => {
   }
 
   return (
-    <div className="event-details-container">
+    <motion.div
+      className="event-details-container"
+      variants={options}
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      transition={{ duration: 0.8, delay: 0.1 }}
+    >
       <div className="event-details-item-container">
         <EventSummary title={event.title} />
         <EventLogistics
@@ -32,7 +45,7 @@ const EventDetailPage = (props: EventDetailProps) => {
           <p>{event.description}</p>
         </EventContent>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
