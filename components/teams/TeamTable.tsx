@@ -2,6 +2,7 @@ import React from 'react';
 
 import TeamItem from './TeamItem';
 import { TeamType } from '../../models';
+import ArrowDownIcon from '../../UI/Icons/arrow-right-icon'
 
 type Props = {
   teams: TeamType[];
@@ -32,7 +33,7 @@ const TeamTable = (props: Props) => {
       <div className="rating-head-row">
         <div className="rating-head-name">Название</div>
         <div className="rating-head-games" onClick={sortByGames}>
-          Игры
+          Игры {props.sortState.type==='byGames' && <ArrowDownIcon/>}
         </div>
         <div className="rating-head-points" onClick={sortByPoints}>
           Баллы
